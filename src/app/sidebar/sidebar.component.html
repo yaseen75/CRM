@@ -1,0 +1,234 @@
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar" style="background-color: #f6f7f8">
+  <div class="sidebar-inner slimscroll">
+    <form action="/search" class="mobile-view">
+      <input class="form-control" type="text" placeholder="Search here" />
+      <button class="btn" type="button"><i class="fa fa-search"></i></button>
+    </form>
+    <perfect-scrollbar [scrollIndicators]="false">
+      <div id="sidebar-menu" class="sidebar-menu">
+        <ul>
+          <li class="submenu">
+            <a
+              routerLink="/dashboard"
+              [ngClass]="[activeRoute === 'dashboard' ? 'active' : '']"
+              ><img src="../../assets/icons/CRM.png" width="25vh" />
+              <span> CRM</span> <span class="menu-arrow"></span
+            ></a>
+            <ul class="sub-menus">
+              <li [ngClass]="[activeRoute === 'activities' ? 'active' : '']">
+                <a routerLink="activities"> <span>Activities</span></a>
+              </li>
+
+              <li [ngClass]="[activeRoute === 'contacts' ? 'active' : '']">
+                <a routerLink="contacts"> <span>Contacts</span></a>
+              </li>
+              <li [ngClass]="[activeRoute === 'companies' ? 'active' : '']">
+                <a routerLink="companies"> <span>Customer</span></a>
+              </li>
+              <li
+                [ngClass]="[
+                  (activeRoute === 'deals' ? 'active' : '') ||
+                    (activeRoute === 'deals-kanban-view' ? 'active' : '')
+                ]"
+              >
+                <a routerLink="deals"> <span>Deals</span></a>
+              </li>
+              <li [ngClass]="[activeRoute === 'email' ? 'active' : '']">
+                <a routerLink="email"><span>Email</span></a>
+              </li>
+              <li
+                [ngClass]="[
+                  (activeRoute === 'leads' ? 'active' : '') ||
+                    (activeRoute === 'leads-kanban-view' ? 'active' : '')
+                ]"
+              >
+                <a routerLink="leads"><span>Leads</span></a>
+              </li>
+
+              <li
+                [ngClass]="[
+                  (activeRoute === 'projects' ? 'active' : '') ||
+                    (activeRoute === 'projects-kanban-view' ? 'active' : '')
+                ]"
+              >
+                <a routerLink="projects"><span>Projects</span></a>
+              </li>
+              <li [ngClass]="[activeRoute === 'reports' ? 'active' : '']">
+                <a routerLink="reports"><span>Reports</span></a>
+              </li>
+              <li [ngClass]="[activeRoute === 'tasks' ? 'active' : '']">
+                <a routerLink="tasks"> <span>Tasks</span></a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="submenu">
+            <a
+              [ngClass]="[
+                (activeRoute === 'error-404' ? 'active' : '') ||
+                  (activeRoute === 'error-500' ? 'active' : '')
+              ]"
+              href="#"
+              ><img
+                src="../../assets/icons/Sysytem-Administrator.png"
+                width="25vh" />
+              <span> System Administration </span>
+              <span class="menu-arrow"></span
+            ></a>
+            <ul class="sub-menus">
+              <li [ngClass]="[activeRoute === 'error-500' ? 'active' : '']">
+                <a routerLink="#">Company Setting</a>
+              </li>
+              <li [ngClass]="[activeRoute === 'error-404' ? 'active' : '']">
+                <a routerLink="#">User Setting </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- <li class="submenu">
+            <a
+              [ngClass]="[
+                (activeRoute === 'faq' ? 'active' : '') ||
+                  (activeRoute === 'terms' ? 'active' : '') ||
+                  (activeRoute === 'privacy-policy' ? 'active' : '') ||
+                  (activeRoute === 'blank-page' ? 'active' : '')
+              ]"
+              href="#"
+              ><i class="feather-list"></i> <span> Pages </span>
+              <span class="menu-arrow"></span
+            ></a>
+            <ul class="sub-menus">
+              <li [ngClass]="[activeRoute === 'faq' ? 'active' : '']">
+                <a routerLink= "/faq"> FAQ </a>
+              </li>
+              <li [ngClass]="[activeRoute === 'terms' ? 'active' : '']">
+                <a routerLink="/terms"> Terms </a>
+              </li>
+              <li
+                [ngClass]="[activeRoute === 'privacy-policy' ? 'active' : '']"
+              >
+                <a routerLink="/privacy-policy"> Privacy Policy </a>
+              </li>
+              <li [ngClass]="[activeRoute === 'blank-page' ? 'active' : '']">
+                <a routerLink="/blank-page"> Blank Page </a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-title">
+            <span>UI Interface</span>
+          </li>
+          <li [ngClass]="[activeRoute === 'components' ? 'active' : '']">
+            <a routerLink="/components"
+              ><i class="feather-layout"></i> <span>Components</span></a
+            >
+          </li>
+          <li class="submenu">
+            <a
+              [ngClass]="[
+                (activeRoute === 'form-input-groups' ? 'active' : '') ||
+                  (activeRoute === 'form-basic-inputs' ? 'active' : '') ||
+                  (activeRoute === 'form-horizontal' ? 'active' : '') ||
+                  (activeRoute === 'form-vertical' ? 'active' : '') ||
+                  (activeRoute === 'form-mask' ? 'active' : '') ||
+                  (activeRoute === 'form-validation' ? 'active' : '')
+              ]"
+              href="#"
+              ><i class="feather-credit-card"></i> <span> Forms </span>
+              <span class="menu-arrow"></span
+            ></a>
+            <ul class="sub-menus">
+              <li
+                [ngClass]="[
+                  activeRoute === 'form-basic-inputs' ? 'active' : ''
+                ]"
+              >
+                <a routerLink="/form-basic-inputs">Basic Inputs </a>
+              </li>
+              <li
+                [ngClass]="[
+                  activeRoute === 'form-input-groups' ? 'active' : ''
+                ]"
+              >
+                <a routerLink="/form-input-groups">Input Groups </a>
+              </li>
+              <li
+                [ngClass]="[activeRoute === 'form-horizontal' ? 'active' : '']"
+              >
+                <a routerLink="/form-horizontal">Horizontal Form </a>
+              </li>
+              <li [ngClass]="[activeRoute === 'form-vertical' ? 'active' : '']">
+                <a routerLink="/form-vertical"> Vertical Form </a>
+              </li>
+              <li [ngClass]="[activeRoute === 'form-mask' ? 'active' : '']">
+                <a routerLink='form-mask'> Form Mask </a>
+              </li>
+              <li
+                [ngClass]="[activeRoute === 'form-validation' ? 'active' : '']"
+              >
+                <a routerLink="/form-validation"> Form Validation </a>
+              </li>
+            </ul>
+          </li>
+          <li class="submenu">
+            <a
+              [ngClass]="[
+                (activeRoute === 'tables-basic' ? 'active' : '') ||
+                  (activeRoute === 'data-tables' ? 'active' : '')
+              ]"
+              href="#"
+              ><i class="feather-box"></i> <span> Tables </span>
+              <span class="menu-arrow"></span
+            ></a>
+            <ul class="sub-menus">
+              <li [ngClass]="[activeRoute === 'tables-basic' ? 'active' : '']">
+                <a routerLink="/tables-basic">Basic Tables </a>
+              </li>
+              <li [ngClass]="[activeRoute === 'data-tables' ? 'active' : '']">
+                <a routerLink="/data-tables">Data Table </a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-title">
+            <span>Extras</span>
+          </li>
+
+          <li class="submenu">
+            <a href="javascript:void(0);"
+              ><i class="feather-command"></i> <span>Multi Level</span>
+              <span class="menu-arrow"></span
+            ></a>
+            <ul class="sub-menus">
+              <li class="submenu">
+                <a href="javascript:void(0);">
+                  <span>Level 1</span> <span class="menu-arrow"></span
+                ></a>
+                <ul class="sub-menus">
+                  <li>
+                    <a href="javascript:void(0);"><span>Level 2</span></a>
+                  </li>
+                  <li class="submenu">
+                    <a href="javascript:void(0);">
+                      <span> Level 2</span> <span class="menu-arrow"></span
+                    ></a>
+                    <ul class="sub-menus">
+                      <li><a href="javascript:void(0);">Level 3</a></li>
+                      <li><a href="javascript:void(0);">Level 3</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);"> <span>Level 2</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:void(0);"> <span>Level 1</span></a>
+              </li>
+            </ul>
+          </li> -->
+        </ul>
+      </div>
+    </perfect-scrollbar>
+  </div>
+</div>
+<!-- /Sidebar -->
