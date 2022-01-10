@@ -15,7 +15,7 @@ const routes: Routes = [
     canActivate: [MsalGuard],
   },
   {
-    path: 'user',
+    path: '',
     loadChildren: () =>
       import(`./all-modules/all-modules.module`).then(
         (m) => m.AllModulesModule
@@ -24,11 +24,11 @@ const routes: Routes = [
   { path: 'adminlogin', component: AdminLoginComponent },
   { path: 'error-404', component: Error404Component },
   { path: 'error-500', component: Error500Component },
-  { path: '', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   {
     path: 'admin',
-  
+
     loadChildren: () =>
       import('./admin/admin.module').then((m) => m.AdminModule),
   },
@@ -37,9 +37,11 @@ const routes: Routes = [
 const isIframe = window !== window.parent && !window.opener;
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    initialNavigation: !isIframe ? 'enabled' : 'disabled' // Don't perform initial navigation in iframes
-  })],
+  imports: [
+    RouterModule.forRoot(routes, {
+      initialNavigation: !isIframe ? 'enabled' : 'disabled', // Don't perform initial navigation in iframes
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
