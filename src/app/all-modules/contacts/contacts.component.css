@@ -39,26 +39,12 @@ color:#007E87
   display: inline-block;
   width: 65vw;
 }
-.line1 {
-  height: 1px;
-  background-color: #e9ecef;
-  margin-bottom: 10px;
-  margin-right: 3rem;
-  margin-left: 3rem;
-}
+
 
 .spedificNavbar {
   display: flex;
   margin-top: 5px;
 }
-/* Dropdown Button */
-/* .dropbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-} */
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
@@ -153,63 +139,7 @@ color:#007E87
 color: black;
 }
 
-@media screen and (max-width: 650px) {
-  #mainnav{
-    
-   
 
-    margin-left: -10px;
-  }
-  #contact{
-    display: block;
-    width: 100%;
-  }
-  .icons>ul>li{
-margin-left: 10px;
-
-
-   
-  
-
-  }
-}
-@media screen and (max-width: 450px) {
-  #delete{
-    display: none;
-  }
-  #mainnav{
-   
-    margin-left: -10px;
-  }
-  .icons{
-    width: 100%;
-    font-weight: 700;
-   
-   margin-left: 1rem;
-
-  }
-}
-@media screen and (max-width: 1200px) {
-#customer{
-  display: none;
-}
-}
-@media screen and (max-width: 1000px) {
-#newDocument{
-  display: none;
-}
-
-}
-@media screen and (max-width: 800px) {
-#report{
-  display: none;
-}
-}
-@media screen and (max-width: 110px) {
-#process{
-  display: none;
-}
-}
 
 /* for table y-scrollbar */
 .my-custom-scrollbar {
@@ -217,82 +147,41 @@ position: relative;
 height: 70vh;
 overflow: auto;
 }
-.table-wrapper-scroll-y {
-display: block;
+.col-1 {
+    flex: 0 0 3.333333%;
+    max-width: 8.333333%;
 }
-.row .col-md-4 {
-    position: unset;
-    padding: 0px !important;
-    padding-right: 5px !important;
+.col-3 {
+    flex: 0 0 20%;
+    max-width: 25%;
+    padding-right: 0px; 
+    padding-left: 0px;
 }
-.rightsidebaricone>ul>li>a{
-  color: #505c6d;
-}
-.rightsidebaricone>ul>li>i{
-  color: #505c6d;
-}
-
-/* #search-form {
-  display: none;
+.col-6{
+   padding-right: 2px; 
+    padding-left: 2px;
 
 }
-
-.fas {
-  margin-right: 10px;
+.table td{
+  padding: 5px;
 }
-
-
-#fa{
-    margin-right: 20px;
-
+.table th{
+  padding: 0px;
 }
-.line{
-    width:  460vh;
-    height: 1px;
+.left_sidebar{
+  height: 90px;
+  width: 100px;
+  margin-top: 5px;
 }
-
-.searchContainer{
-    margin-top: 5px;
-    display: flex;
+table #checkbox {
+  visibility: hidden;
 }
-.form-group{
-    border-radius: 5px;
+table tr:hover #checkbox {
+  visibility: visible;
 }
-.row{
-    display: flex;
+table th{
+  margin-left: 2rem;
 }
 
 
 
-
- */
-@media screen and (max-width: 1000px) {
-.rightsidebaricone{
-  display: none;
-}
-.tablemain{
-  display: block;
-  width: 100%;
- 
-}
-}
-.col-lg-6 , .col-md-12{
-  padding-left: 3px;
-  padding-right: 3px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-}
-.col-4{
-  padding-left: 1px;
-  padding-right: 1px;
-}
-
-tr:hover{
-  background: #d8e2f5;
-}
-
-
-#content{
-  height: 260px;
-
-}
